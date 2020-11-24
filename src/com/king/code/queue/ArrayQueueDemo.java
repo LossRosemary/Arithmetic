@@ -6,28 +6,36 @@ public class ArrayQueueDemo {
 	public static void main(String[] args) {
 		// 创建一个队列
 		ArrayQueue queue = new ArrayQueue(3);
+
 		char key = ' '; // 接收用户输入
 		Scanner sc = new Scanner(System.in);
 		boolean loop = true;
+
 		// 输出一个菜单
 		while (loop) {
+
 			System.out.println("s(show):显示队列");
 			System.out.println("e(exit):退出程序");
 			System.out.println("a(add):添加数据到队列");
 			System.out.println("g(get):从队列取出数据");
 			System.out.println("h(head):查看队列头的数据");
+
 			key = sc.next().charAt(0); // 接收一个字符
+
 			switch (key) {
+
 			case 's': // 显示队列
 				queue.showQueue();
 				System.out.println();
 				break;
+
 			case 'a': // 添加数据到队列
 				System.out.println("输入一个数：");
 				int value = sc.nextInt();
 				queue.addQueue(value);
 				System.out.println();
 				break;
+
 			case 'g': // 从队列取出数据
 				try {
 					int result = queue.getQueue();
@@ -36,6 +44,7 @@ public class ArrayQueueDemo {
 					System.out.println(e.getMessage() + "\n\r");
 				}
 				break;
+
 			case 'h': // 查看队列头的数据
 				try {
 					int result = queue.headQueue();
@@ -44,6 +53,7 @@ public class ArrayQueueDemo {
 					System.out.println(e.getMessage() + "\n\r");
 				}
 				break;
+
 			case 'e': // 退出程序
 				sc.close();
 				loop = false;
