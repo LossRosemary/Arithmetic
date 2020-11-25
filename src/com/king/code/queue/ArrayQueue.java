@@ -1,5 +1,16 @@
 package com.king.code.queue;
 
+//笔记：
+//		循环队列的元素总数为 maxSize
+//		front 指向队列的第一个元素的前一个位置
+//		rear 指向队列最后一个元素
+//		队空：front = rear
+//		队满：rear = maxSize - 1;
+
+//		向队列添加元素（入队）：rear++; arr[rear] = n;
+//		向队列取出元素（出队）：front++; return arr[front];
+//		遍历：for (int i = front + 1; i < arr.length; i++)
+
 public class ArrayQueue {
 
 	// 使用数组模拟队列 --- 编写一个ArrayQueue类
