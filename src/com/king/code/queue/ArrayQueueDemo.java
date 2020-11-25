@@ -34,12 +34,18 @@ public class ArrayQueueDemo {
 				int value = sc.nextInt();
 				queue.addQueue(value);
 				System.out.println();
+				System.out.println("当前队列：");
+				queue.showQueue();
+				System.out.println();
 				break;
 
 			case 'g': // 从队列取出数据
 				try {
 					int result = queue.getQueue();
-					System.out.printf("取出的数据是%d\n\n\r", result);
+					System.out.printf("取出的数据是%d\n\r", result);
+					System.out.println("当前队列：");
+					queue.showQueue();
+					System.out.println();
 				} catch (Exception e) {
 					System.out.println(e.getMessage() + "\n\r");
 				}

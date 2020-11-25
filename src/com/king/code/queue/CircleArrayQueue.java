@@ -68,6 +68,7 @@ public class CircleArrayQueue {
 		// 遍历
 		if (isEmpty()) {
 			System.out.println("队列空，没有数据~~~");
+			return;
 		}
 		for (int i = front; i < front + size(); i++) {
 			System.out.printf("arr[%d]=%d\n", i % maxSize, arr[i % maxSize]);

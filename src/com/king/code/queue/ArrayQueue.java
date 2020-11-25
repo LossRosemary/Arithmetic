@@ -65,8 +65,9 @@ public class ArrayQueue {
 		// 遍历
 		if (isEmpty()) {
 			System.out.println("队列空，没有数据~~~");
+			return;
 		}
-		for (int i = front + 1; i < arr.length; i++) {
+		for (int i = front + 1; i < rear + 1; i++) {
 			System.out.printf("arr[%d]=%d\n", i, arr[i]);
 		}
 

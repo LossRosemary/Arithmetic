@@ -5,6 +5,13 @@ import java.io.BufferedWriter;
 import java.io.FileReader;
 import java.io.FileWriter;
 
+// 稀疏数组：
+//					 行					  列					         值
+//		【0】	二维数组的总行数		二维数组的总列数		二维数组共有多少个非0值
+//		【1】		row					 col				    value			
+
+// 		应用：当一个数组中大部分元素为0，或者同一个值的数组时，可以使用稀疏数组来保存该数组
+
 //	二维数组 --> 稀疏数组的思路 
 //		1. 遍历原始的二维数组，得到有效数据的个数 sum 
 //		2. 根据 sum ，就可以创建稀疏数组int[sum + 1][3]  sparseArr  
