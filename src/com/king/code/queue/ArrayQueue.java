@@ -1,6 +1,7 @@
 package com.king.code.queue;
 
 //笔记：
+//		特点：先进先出
 //		循环队列的元素总数为 maxSize
 //		front 指向队列的第一个元素的前一个位置
 //		rear 指向队列最后一个元素
