@@ -7,7 +7,7 @@ public class Node {
 	public String name;
 	public Node next; // ÷∏’Î
 
-	public Node(int no, String name, String nickName) {
+	public Node(int no, String name) {
 		super();
 		this.no = no;
 		this.name = name;
@@ -15,7 +15,7 @@ public class Node {
 
 	@Override
 	public String toString() {
-		return "Node [no=" + no + ", name=" + name + "]";
+		return "Node: [no=" + no + ", name=" + name + "]";
 	}
 
 }
