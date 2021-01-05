@@ -20,7 +20,7 @@ public class Node {
 
 	@Override
 	public String toString() {
-		return "Node: [no=" + no + ", name=" + name + "]";
+		return "Node: [No=" + no + ", Name=" + name + "]";
 	}
 
 }

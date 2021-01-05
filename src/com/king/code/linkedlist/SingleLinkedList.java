@@ -4,7 +4,9 @@ public class SingleLinkedList {
 	// 先初始化一个头节点，头节点不要动，不存放具体数据
 	private Node head = new Node(0, "");
 
-	// 遍历该链表
+	/**
+	 * 遍历该链表
+	 */
 	public void listNode() {
 		// 判断链表是否为空
 		if (head.next == null) {
@@ -23,9 +25,14 @@ public class SingleLinkedList {
 		}
 	}
 
-	// 添加节点到单向链表
-	// 思路：当不考虑编号时，1、找到当前链表的最后节点；2、将最后这个节点指向新的节点
+	/**
+	 * 添加节点到单向链表最后
+	 * 
+	 * @param node
+	 */
 	public void addNode(Node node) {
+		// 思路：当不考虑编号时，1、找到当前链表的最后节点；2、将最后这个节点指向新的节点
+
 		// head节点不能动，需要一个辅助遍历的temp
 		Node temp = head;
 
@@ -42,7 +49,11 @@ public class SingleLinkedList {
 		temp.next = node;
 	}
 
-	// 按照节点编号顺序，添加节点到单向链表
+	/**
+	 * 按照节点编号顺序，添加节点到单向链表
+	 * 
+	 * @param node
+	 */
 	public void addNodeByOrder(Node node) {
 
 		// head节点不能动，需要一个辅助遍历的temp
@@ -77,7 +88,11 @@ public class SingleLinkedList {
 		}
 	}
 
-	// 根据编号来修改节点信息
+	/**
+	 * 根据编号来修改节点信息
+	 * 
+	 * @param node
+	 */
 	public void updateNode(Node node) {
 		// 判断链表是否为空
 		if (head.next == null) {
@@ -111,9 +126,13 @@ public class SingleLinkedList {
 		}
 	}
 
-	// 根据编号来删除节点
-	// 思路：找到待删除节点的前一个节点
+	/**
+	 * 根据编号来删除节点
+	 * 
+	 * @param no
+	 */
 	public void deleteNode(int no) {
+		// 思路：找到待删除节点的前一个节点
 		if (head.next == null) {
 			System.out.println("该链表为空！！！");
 			return;
@@ -143,4 +162,5 @@ public class SingleLinkedList {
 			System.out.printf("编号为%d的节点不存在！！！", no);
 		}
 	}
+
 }
